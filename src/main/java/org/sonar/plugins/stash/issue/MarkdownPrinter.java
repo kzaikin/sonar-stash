@@ -55,8 +55,7 @@ public final class MarkdownPrinter {
   public static String printReportMarkdown(String[] idCard, SonarQubeIssuesReport report,
                                                      CoverageIssuesReport coverageReport, int issueThreshold) {
     
-    StringBuilder sb = new StringBuilder("## SonarQube analysis Overview");
-    sb.append(NEW_LINE);
+    StringBuilder sb = new StringBuilder();
 
     // Splitting the idCard into variables
     String stashProject  = idCard[0];

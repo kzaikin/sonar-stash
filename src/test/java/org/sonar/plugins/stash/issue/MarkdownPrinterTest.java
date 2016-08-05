@@ -134,7 +134,7 @@ public class MarkdownPrinterTest {
     int issueThreshold = 100;
     
     String issueReportMarkdown = MarkdownPrinter.printReportMarkdown(INFO, issueReport, coverageReport, issueThreshold);
-    String reportString = "## SonarQube analysis Overview\n"
+    String reportString = ""
         + "| Total New Issues | 4 |\n"
         + "|-----------------|------|\n"
         + "| BLOCKER | 1 |\n"
@@ -159,7 +159,7 @@ public class MarkdownPrinterTest {
     int issueThreshold = 3;
     
     String issueReportMarkdown = MarkdownPrinter.printReportMarkdown(INFO, issueReport, coverageReport, issueThreshold);
-    String reportString = "## SonarQube analysis Overview\n"
+    String reportString = ""
         + "### Too many issues detected (4/3): Issues cannot be displayed in Diff view.\n\n"
         + "| Total New Issues | 4 |\n"
         + "|-----------------|------|\n"
@@ -188,7 +188,7 @@ public class MarkdownPrinterTest {
     CoverageIssuesReport coverageReport = new CoverageIssuesReport();
     
     String issueReportMarkdown = MarkdownPrinter.printReportMarkdown(INFO, issueReport, coverageReport, issueThreshold);
-    String reportString = "## SonarQube analysis Overview\n"
+    String reportString = ""
         + "### No new issues detected!\n\n";
         
     assertEquals(reportString, issueReportMarkdown);
@@ -199,7 +199,7 @@ public class MarkdownPrinterTest {
     issueReport = new SonarQubeIssuesReport();
     
     String issueReportMarkdown = MarkdownPrinter.printReportMarkdown(INFO, issueReport, coverageReport, 100);
-    String reportString = "## SonarQube analysis Overview\n"
+    String reportString = ""
         + "| Total New Issues | 1 |\n"
         + "|-----------------|------|\n"
         + "| BLOCKER | 0 |\n"
@@ -221,7 +221,7 @@ public class MarkdownPrinterTest {
     coverageReport = new CoverageIssuesReport();
     
     String issueReportMarkdown = MarkdownPrinter.printReportMarkdown(INFO, issueReport, coverageReport, 100);
-    String reportString = "## SonarQube analysis Overview\n"
+    String reportString = ""
         + "| Total New Issues | 3 |\n"
         + "|-----------------|------|\n"
         + "| BLOCKER | 1 |\n"
